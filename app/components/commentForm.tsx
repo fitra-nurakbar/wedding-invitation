@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { supabase } from '@/utils/supabase/client'
+import { containsBadWords } from '@/utils/badWords'
 
 export default function CommentForm() {
   const [name, setName] = useState('')
@@ -10,7 +11,21 @@ export default function CommentForm() {
 
   const sendComment = async (e: React.FormEvent) => {
     e.preventDefault()
+
     if (!name || !message) return
+
+    // 🔥 VALIDASI BAD WORDS (BENAR)
+    if (containsBadWords(message)) {
+      alert('Komentar mengandung kata tidak pantas')
+      setMessage('')
+      return
+    }
+
+     if (containsBadWords(name)) {
+      alert('Nama mengandung kata tidak pantas')
+      setName('')
+      return
+    }
 
     setLoading(true)
 
@@ -55,7 +70,7 @@ export default function CommentForm() {
 
       <button
         disabled={loading}
-        className="w-full bg-blue-500 text-white py-2 rounded-lg disabled:opacity-50"
+        className="w-full bg-blue-500 text-white py-2 rounded-lg disabled:opacity-50 cursor-pointer"
       >
         {loading ? 'Mengirim...' : 'Kirim'}
       </button>
