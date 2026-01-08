@@ -10,7 +10,7 @@ type Message = {
   created_at: string
 }
 
-export default function CommentList() {
+export default function CommentsList() {
   const [comments, setComments] = useState<Message[]>([])
   const [loading, setLoading] = useState(true)
 
