@@ -1,6 +1,6 @@
-import InvitationCover from "@/app/components/InvitationCover";
-import CommentForm from "@/app/components/CommentForm";
-import CommentsList from "@/app/components/CommentsList";
+import InvitationCover from "@/components/InvitationCover";
+import CommentForm from "@/components/CommentForm";
+import CommentsList from "@/components/CommentsList";
 
 export default function Home() {
   return (
