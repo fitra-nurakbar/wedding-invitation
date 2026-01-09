@@ -40,27 +40,30 @@ export default function InvitationCover() {
       {!open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center h-screen bg-linear-to-br from-rose-100 to-rose-200">
           <div className="text-center px-6 animate-fade-in justify-center">
-            <p className="text-sm tracking-widest text-gray-600 mb-3">
+            <h1 className='text-9xl font-yrsa text-gray-800 mb-5'>IJ</h1>
+            <p className="text-sm font-extralight tracking-widest text-gray-600 mb-3">
               The Wedding Of
             </p>
 
-            <h1 className="text-3xl md:text-5xl font-serif text-gray-800 mb-6">
+            <h1 className="text-3xl font-yrsa text-gray-800 mb-10">
               Ifha & Jefri
             </h1>
 
-            <p>Kepada Yth. <br></br>
+            <p className="font-extralight text-gray-800">Kepada Yth. <br></br>
               Bapak/Ibu/Saudara/i
             </p>
-            <h2 className='text-2xl md:text-5xl font-serif text-gray-800 mb-6'>Tamu</h2>
+            <h2 className='text-2xl font-bold text-gray-800 my-3'>Tamu</h2>
 
             <button
               onClick={handleOpen}
-              className="flex gap-1 items-center px-6 py-2 bg-white text-gray-500 text-sm active:scale-110 transition cursor-pointer animate-scale"
+              className="px-6 py-2 bg-white text-gray-500 text-sm active:scale-110 transition cursor-pointer animate-scale"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
-              </svg>
-              Buka Undangan
+              <div className="flex gap-1 items-center ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                </svg>
+                Buka Undangan
+              </div>
             </button>
           </div>
         </div>
