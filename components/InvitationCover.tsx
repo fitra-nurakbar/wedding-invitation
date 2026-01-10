@@ -38,21 +38,21 @@ export default function InvitationCover() {
 
       {/* Cover */}
       {!open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center h-screen bg-linear-to-br from-rose-100 to-rose-200">
+        <div className="fixed inset-0 z-50 flex items-center justify-center h-screen bg-linear-to-b from-gray-100 via-white to-gray-400">
           <div className="text-center px-6 animate-fade-in justify-center">
-            <h1 className='text-9xl font-yrsa text-gray-800 mb-5'>IJ</h1>
-            <p className="text-sm font-extralight tracking-widest text-gray-600 mb-3">
+            <h1 className='text-9xl font-cinzel mb-5'>IJ</h1>
+            <p className="text-sm font-roboto font-extralight tracking-widest text-gray-400 mb-3">
               The Wedding Of
             </p>
 
-            <h1 className="text-3xl font-yrsa text-gray-800 mb-10">
+            <h2 className="text-3xl font-yrsa mb-10">
               Ifha & Jefri
-            </h1>
+            </h2>
 
-            <p className="font-extralight text-gray-800">Kepada Yth. <br></br>
+            <p className="text-sm font-extralight">Kepada Yth. <br></br>
               Bapak/Ibu/Saudara/i
             </p>
-            <h2 className='text-2xl font-bold text-gray-800 my-3'>Tamu</h2>
+            <h3 className='text-2xl font-bold my-3'>Tamu</h3>
 
             <button
               onClick={handleOpen}

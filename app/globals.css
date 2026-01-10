@@ -2,15 +2,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #474747;
+  --primary: #BE6462;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-montserrat: "Montserrat", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-yrsa: "Yrsa", serif;
+  --font-roboto: "Roboto", serif;
+  --font-cinzel: "Cinzel Decorative", sans-serif;
   --animate-scale: animate-scale 3s ease-in-out infinite;
 
   @keyframes animate-scale {
@@ -24,11 +26,15 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+h1, h2 {
+ color: var(--primary);
 }
 
 body {
@@ -36,3 +42,4 @@ body {
   color: var(--foreground);
   font-family: "Poppins", sans-serif;
 }
+

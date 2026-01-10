@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
-import { Poppins, Montserrat, Yrsa } from "next/font/google";
+import { Poppins, Montserrat, Yrsa, Roboto, Cinzel_Decorative } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: "100"
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
+  weight: "400",
 });
 
 const yrsa = Yrsa({
   subsets: ["latin"],
   variable: "--font-yrsa",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
+
+const cinzel = Cinzel_Decorative({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  weight: "400"
 });
 
 const metadata: Metadata = {
@@ -30,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${montserrat.variable} ${yrsa.variable}`}>
+      <body className={`${poppins.variable} ${yrsa.variable} ${roboto.variable} ${cinzel.variable}`}>
         {children}
       </body>
     </html>
