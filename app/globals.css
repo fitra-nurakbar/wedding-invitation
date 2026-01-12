@@ -2,13 +2,14 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #474747;
-  --primary: #BE6462;
+  --foreground: #424242;
+  --primary: #be6462;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
   --font-poppins: "Poppins", sans-serif;
   --font-yrsa: "Yrsa", serif;
   --font-roboto: "Roboto", serif;
@@ -33,13 +34,14 @@
   }
 } */
 
-h1, h2 {
- color: var(--primary);
+h1,
+h2 {
+  color: var(--primary);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
-

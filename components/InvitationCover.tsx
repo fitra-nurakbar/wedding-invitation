@@ -41,7 +41,7 @@ export default function InvitationCover() {
         <div className="fixed inset-0 z-50 flex items-center justify-center h-screen bg-linear-to-b from-gray-100 via-white to-gray-400">
           <div className="text-center px-6 animate-fade-in justify-center">
             <h1 className='text-9xl font-cinzel mb-5'>IJ</h1>
-            <p className="text-sm font-roboto font-extralight tracking-widest text-gray-400 mb-3">
+            <p className="text-sm font-roboto font-light tracking-widest text-gray-400 mb-3">
               The Wedding Of
             </p>
 
@@ -49,7 +49,7 @@ export default function InvitationCover() {
               Ifha & Jefri
             </h2>
 
-            <p className="text-sm font-extralight">Kepada Yth. <br></br>
+            <p className="text-sm">Kepada Yth. <br></br>
               Bapak/Ibu/Saudara/i
             </p>
             <h3 className='text-2xl font-bold my-3'>Tamu</h3>
