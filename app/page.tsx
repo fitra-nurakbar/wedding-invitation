@@ -1,7 +1,8 @@
 import InvitationCover from "@/components/InvitationCover";
 import CommentForm from "@/components/CommentForm";
 import CommentsList from "@/components/CommentsList";
-import Header from "@/components/Header";
+import Cover from "@/components/Cover";
+import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
       <div
         className="
           w-full max-w-sm
-          rounded-xl sm:border-4 border-primary bg-white
-          overflow-hidden
+          rounded-xl sm:border-4 sm:border-primary bg-white
+          sm:overflow-hidden
           sm:my-4
           sm:h-[calc(100vh-2rem)]
         "
@@ -19,10 +20,11 @@ export default function Home() {
         {/* SCROLL AREA */}
         <div className="sm:max-h-screen sm:overflow-y-auto p-5">
           <InvitationCover />
-          <Header />
+          <Cover />
           <CommentForm />
           <CommentsList />
         </div>
+        <Menu />
       </div>
     </div>
   );

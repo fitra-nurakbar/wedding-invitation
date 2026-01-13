@@ -65,7 +65,7 @@ export default function Countdown() {
 
 function TimeBox({ value, label }: TimeBoxProps) {
   return (
-    <div className="flex flex-col items-center justify-center bg-red-200 text-white rounded-lg p-2.5">
+    <div className="flex flex-col items-center justify-center bg-[#afa69c] text-white rounded-lg p-2.5">
       <div className="text-xl -mb-1.5">{value}</div>
       <p className="text-[9.5px]">{label}</p>
     </div>

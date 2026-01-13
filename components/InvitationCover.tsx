@@ -75,7 +75,7 @@ export default function InvitationCover() {
           onClick={toggleMusic}
           aria-label="Toggle music"
           className="
-            fixed bottom-5 right-5 z-50
+            fixed bottom-20 right-5 z-50
             w-10 h-10 rounded-full
             bg-linear-to-b from-white to-gray-500 text-black
             shadow-xl
