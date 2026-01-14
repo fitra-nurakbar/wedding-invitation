@@ -25,12 +25,10 @@ function MenuItem({ label, target, icon: Icon, }: { label: string; target: strin
 
   return (
     <Link href={`#${target}`} className="border-white">
-      <button className="text-white cursor-pointer hover:text-primary transition-colors pt-1 pb-2 capitalize">
-        <Icon className="w-10 h-10 fill-white" />
+      <button className="flex flex-col gap-1 justify-center items-center text-white cursor-pointer hover:text-primary transition-colors py-1 capitalize mx-auto">
+        <Icon className="w-6 h-6 fill-white" />
         <span>{label}</span>
       </button>
     </Link>
   );
 }
-
-
