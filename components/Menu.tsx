@@ -25,7 +25,7 @@ function MenuItem({ label, target, icon: Icon, }: { label: string; target: strin
 
   return (
     <Link href={`#${target}`} className="border-white">
-      <button className="flex flex-col gap-1 justify-center items-center text-white cursor-pointer hover:text-primary transition-colors py-1 capitalize mx-auto">
+      <button className={`flex flex-col gap-1 justify-center items-center text-white cursor-pointer transition-colors py-1 capitalize w-full hover:bg-linear-to-b from-[#f78280] to-[#fc6260] ${label === 'cover' ? 'rounded-tl-lg' : label === 'wishes' ? 'rounded-tr-lg' : ''}`}>
         <Icon className="w-6 h-6 fill-white" />
         <span>{label}</span>
       </button>
