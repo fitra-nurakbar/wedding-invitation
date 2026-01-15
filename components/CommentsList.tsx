@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { supabase } from '@/utils/supabase/server'
+import { useEffect, useState } from 'react'
+import FadeUp from './animation/FadeUp'
 
 type Message = {
   id: string
@@ -50,16 +51,17 @@ export default function CommentsList() {
   return (
     <div className="max-w-md mx-auto mt-6 space-y-4">
       {comments.map((item) => (
-        <div
-          key={item.id}
-          className="bg-white p-4 rounded-xl shadow"
-        >
-          <p className="font-semibold">{item.name}</p>
-          <p className="text-sm text-gray-600">{item.message}</p>
-          <p className="text-xs text-gray-400 mt-1">
-            {new Date(item.created_at).toLocaleString('id-ID')}
-          </p>
-        </div>
+        <FadeUp key={item.id}>
+          <div
+            className="bg-white p-4 rounded-xl shadow"
+          >
+            <p className="font-semibold">{item.name}</p>
+            <p className="text-sm text-gray-600">{item.message}</p>
+            <p className="text-xs text-gray-400 mt-1">
+              {new Date(item.created_at).toLocaleString('id-ID')}
+            </p>
+          </div>
+        </FadeUp>
       ))}
     </div>
   )

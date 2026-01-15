@@ -3,6 +3,7 @@ import CommentForm from "@/components/CommentForm";
 import CommentsList from "@/components/CommentsList";
 import Cover from "@/components/Cover";
 import Menu from "@/components/Menu";
+import PageWrapper from "@/components/PageWrapper";
 
 export default function Home() {
   return (
@@ -20,9 +21,11 @@ export default function Home() {
         {/* SCROLL AREA */}
         <div className="sm:max-h-screen sm:overflow-y-auto">
           <InvitationCover />
-          <Cover />
-          <CommentForm />
-          <CommentsList />
+          <PageWrapper>
+            <Cover />
+            <CommentForm />
+            <CommentsList />
+          </PageWrapper>
         </div>
         <Menu />
       </div>
