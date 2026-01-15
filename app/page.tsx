@@ -18,7 +18,7 @@ export default function Home() {
         "
       >
         {/* SCROLL AREA */}
-        <div className="sm:max-h-screen sm:overflow-y-auto p-5">
+        <div className="sm:max-h-screen sm:overflow-y-auto">
           <InvitationCover />
           <Cover />
           <CommentForm />

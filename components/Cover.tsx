@@ -1,9 +1,10 @@
 import Countdown from "@/components/Countdown";
+import FadeUp from "./animation/FadeUp";
 
 export default function Cover() {
   return (
-    <section id="cover" className="flex items-center justify-center">
-      <div className="text-center px-6 animate-fade-in">
+    <section id="cover" className="container flex flex-col items-center justify-center">
+      <div className="text-center animate-fade-in">
         <p className="text-sm font-roboto font-light tracking-widest mb-3">
           The Wedding Of
         </p>
@@ -16,6 +17,19 @@ export default function Cover() {
         </h3>
         {/* CLIENT COMPONENT */}
         <Countdown />
+      </div>
+      <div className="flex flex-col items-center justify-between text-center bg-primary px-5 py-10 h-125">
+        <div className="text-white flex justify-center items-center">
+          <h3 className='text-7xl font-cinzel mb-5'>I</h3>
+          <h3 className='text-7xl font-cinzel mt-5'>J</h3>
+        </div>
+        <FadeUp>
+          <p className="text-sm text-white">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
+            <br />
+            <br />
+            (QS. Ar-Rum: 21)
+          </p>
+        </FadeUp>
       </div>
     </section>
   );
