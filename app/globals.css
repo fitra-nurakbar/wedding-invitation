@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #cac2b8;
   --foreground: #424242;
   --primary: #be6462;
 }
@@ -15,6 +15,7 @@
   --font-roboto: "Roboto", serif;
   --font-cinzel: "Cinzel Decorative", sans-serif;
   --animate-scale: animate-scale 3s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.3s ease-out;
 
   @keyframes animate-scale {
     0%,
@@ -23,6 +24,17 @@
     }
     50% {
       transform: scale(1.1);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

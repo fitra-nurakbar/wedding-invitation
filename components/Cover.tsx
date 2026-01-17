@@ -5,7 +5,7 @@ import FadeRight from "./animation/FadeRight";
 
 export default function Cover() {
   return (
-    <section id="cover" className="container flex flex-col items-center justify-center">
+    <section id="cover" className="flex flex-col items-center justify-center">
       <div className="text-center pb-96">
         <p className="text-sm font-roboto font-light tracking-widest mb-3">
           The Wedding Of
@@ -30,7 +30,13 @@ export default function Cover() {
           </FadeRight>
         </div>
         <FadeUp>
-          <p className="text-sm text-white">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
+          <p className="text-sm text-white">
+            <q>Dan di antara tanda-tanda (kebesaran)-
+              Nya ialah Dia menciptakan pasangan-
+              pasangan untukmu dari jenismu sendiri,
+              agar kamu cenderung dan merasa
+              tenteram kepadanya, dan Dia menjadikan
+              di antaramu rasa kasih dan sayang.</q>
             <br />
             <br />
             (QS. Ar-Rum: 21)

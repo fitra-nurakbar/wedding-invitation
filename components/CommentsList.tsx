@@ -2,7 +2,7 @@
 
 import { supabase } from '@/utils/supabase/server'
 import { useEffect, useState } from 'react'
-import FadeUp from './animation/FadeUp'
+import CommentItem from './CommentItem'
 
 type Message = {
   id: string
@@ -14,6 +14,7 @@ type Message = {
 export default function CommentsList() {
   const [comments, setComments] = useState<Message[]>([])
   const [loading, setLoading] = useState(true)
+  const [showAll, setShowAll] = useState(false)
 
   const fetchComments = async () => {
     const { data } = await supabase
@@ -48,21 +49,44 @@ export default function CommentsList() {
     return <p className="text-center mt-4">Memuat komentar...</p>
   }
 
+  const visibleComments = showAll ? comments : comments.slice(0, 5)
+
   return (
-    <div className="max-w-md mx-auto mt-6 space-y-4">
-      {comments.map((item) => (
-        <FadeUp key={item.id}>
-          <div
-            className="bg-white p-4 rounded-xl shadow"
+    <div className="w-full">
+      {/* HEADER */}
+      <div className="border-b-2 border-foreground p-2 my-6">
+        <p className="font-semibold font-roboto">
+          {comments.length} BEST FRIENDS WISHES
+        </p>
+      </div>
+
+      {/* LIST KOMENTAR */}
+      <div className="space-y-4">
+        {visibleComments.map((item) => (
+          <CommentItem key={item.id} item={item} />
+        ))}
+      </div>
+
+      {/* BUTTON MUAT LEBIH BANYAK */}
+      {comments.length > 5 && (
+        <div className="flex justify-center mt-6">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="
+              text-sm text-primary
+              font-medium
+              hover:opacity-80
+              transition
+              px-5
+              py-1
+              border-2 border-primary
+              cursor-pointer
+            "
           >
-            <p className="font-semibold">{item.name}</p>
-            <p className="text-sm text-gray-600">{item.message}</p>
-            <p className="text-xs text-gray-400 mt-1">
-              {new Date(item.created_at).toLocaleString('id-ID')}
-            </p>
-          </div>
-        </FadeUp>
-      ))}
+            {showAll ? 'Sembunyikan' : 'Muat Lebih Banyak'}
+          </button>
+        </div>
+      )}
     </div>
   )
 }
