@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { useMusic } from "../music/MusicProvider";
+import { useAnimation } from "./AnimationProvider";
 
 type FadeUpProps = {
     children: React.ReactNode
@@ -16,13 +16,13 @@ export default function FadeRight({
     once = false,
     delay = 0,
 }: FadeUpProps) {
-    const { playing } = useMusic()
+    const { opened } = useAnimation()
 
     return (
         <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={
-                !requireMusic || playing
+                !requireMusic || opened
                     ? { opacity: 1, x: 0 }
                     : undefined
             }

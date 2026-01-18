@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cinzel_Decorative, Poppins, Roboto, Yrsa } from "next/font/google";
 import "./globals.css";
+import { MusicProvider } from "@/components/music/MusicProvider";
+import { AnimationProvider } from "@/components/animation/AnimationProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,7 +39,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${yrsa.variable} ${roboto.variable} ${cinzel.variable}`}>
-        {children}
+        <MusicProvider>
+          <AnimationProvider>
+            {children}
+          </AnimationProvider>
+        </MusicProvider>
       </body>
     </html>
   );
