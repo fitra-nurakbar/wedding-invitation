@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Montserrat, Yrsa, Roboto, Cinzel_Decorative } from "next/font/google";
-import { AnimationProvider } from '@/context/AnimationContext';
+import { Cinzel_Decorative, Poppins, Roboto, Yrsa } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -38,9 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${yrsa.variable} ${roboto.variable} ${cinzel.variable}`}>
-        <AnimationProvider>
-          {children}
-        </AnimationProvider>
+        {children}
       </body>
     </html>
   );

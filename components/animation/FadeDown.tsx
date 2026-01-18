@@ -1,20 +1,36 @@
 'use client';
-import { useAnimationReady } from "@/context/AnimationContext";
 import { motion } from "framer-motion";
+import { useMusic } from "../music/MusicProvider";
+
+type FadeUpProps = {
+    children: React.ReactNode
+    requireMusic?: boolean
+    once?: boolean
+    delay?: number
+}
 
 export default function FadeDown({
     children,
-}: {
-    children: React.ReactNode;
-}) {
-    const { isReady } = useAnimationReady();
+    requireMusic = false,
+    once = false,
+    delay = 0,
+}: FadeUpProps) {
+    const { playing } = useMusic()
 
     return (
         <motion.div
             initial={{ opacity: 0, y: -60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: "-100px" }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            whileInView={
+                !requireMusic || playing
+                    ? { opacity: 1, y: 0 }
+                    : undefined
+            }
+            viewport={{ once, margin: "-100px" }}
+            transition={{
+                duration: 1,
+                ease: "easeOut",
+                delay,
+            }}
         >
             {children}
         </motion.div>

@@ -1,10 +1,11 @@
+'use client'
+
 import Cover from "@/components/Cover";
 import Footer from "@/components/Footer";
 import InvitationCover from "@/components/InvitationCover";
 import Menu from "@/components/Menu";
 import MusicButton from "@/components/music/MusicButton";
 import { MusicProvider } from "@/components/music/MusicProvider";
-import PageWrapper from "@/components/PageWrapper";
 import Wishes from "@/components/Wishes";
 
 export default function Home() {
@@ -24,12 +25,12 @@ export default function Home() {
           {/* SCROLL AREA */}
           <div className="max-w-sm sm:max-h-screen sm:overflow-y-auto relative">
             <InvitationCover />
-            <PageWrapper>
+            <div id="content">
               <Cover />
               <Wishes />
-            </PageWrapper>
+            </div>
             <Footer />
-          <MusicButton />
+            <MusicButton />
           </div>
           <Menu />
         </div>
