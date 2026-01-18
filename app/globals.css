@@ -16,6 +16,7 @@
   --font-cinzel: "Cinzel Decorative", sans-serif;
   --animate-scale: animate-scale 3s ease-in-out infinite;
   --animate-fade-in: fadeIn 0.3s ease-out;
+  --animate-bg-in: bgIn 2.5s ease-out forwards;
 
   @keyframes animate-scale {
     0%,
@@ -37,6 +38,17 @@
       transform: translateY(0);
     }
   }
+
+  @keyframes bgIn {
+    0% {
+      opacity: 0;
+      filter: blur(18px) brightness(1.2);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0px) brightness(1);
+    }
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -56,7 +68,6 @@ h2 {
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
