@@ -2,11 +2,12 @@
 
 import Cover from "@/components/Cover";
 import Footer from "@/components/Footer";
-import InvitationCover from "@/components/InvitationCover";
+import InvitationCoverClient from "@/components/InvitationCoverClient";
 import Menu from "@/components/Menu";
 import MusicButton from "@/components/music/MusicButton";
 import { MusicProvider } from "@/components/music/MusicProvider";
 import Wishes from "@/components/Wishes";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -24,7 +25,9 @@ export default function Home() {
         >
           {/* SCROLL AREA */}
           <div className="max-w-sm sm:max-h-screen sm:overflow-y-auto relative">
-            <InvitationCover />
+            <Suspense fallback={null}>
+              <InvitationCoverClient />
+            </Suspense>
             <div id="content">
               <Cover />
               <Wishes />

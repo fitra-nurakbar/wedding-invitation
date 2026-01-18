@@ -1,22 +1,14 @@
 'use client'
 
-import { useEffect, useMemo } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
 import FadeDown from './animation/FadeDown'
 import FadeLeft from './animation/FadeLeft'
 import FadeRight from './animation/FadeRight'
 import FadeUp from './animation/FadeUp'
 import { useMusic } from './music/MusicProvider'
 
-export default function InvitationCover() {
+export default function InvitationCover({ guestName }: { guestName: string }) {
   const { opened, openInvitation } = useMusic()
-  const searchParams = useSearchParams()
-
-  // ambil nama tamu dari URL
-  const guestName = useMemo(() => {
-    const name = searchParams.get('to')
-    return name ? decodeURIComponent(name) : 'Tamu'
-  }, [searchParams])
 
   // lock scroll
   useEffect(() => {
