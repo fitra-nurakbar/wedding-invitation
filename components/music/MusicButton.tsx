@@ -17,7 +17,7 @@ export default function MusicButton() {
         shadow-lg
         flex items-center justify-center
         active:scale-90 transition
-
+        cursor-pointer
         max-w-xl
       "
       >
