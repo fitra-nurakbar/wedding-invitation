@@ -2,8 +2,8 @@
 
 import { submitComment } from '@/app/actions/submitComment'
 import { useEffect, useRef, useState } from 'react'
-import { PersonIcon } from './IconsMenu'
-import Alert from './Alert'
+import { PersonIcon } from '../IconsMenu'
+import Alert from '../Alert'
 
 export default function CommentForm() {
   const [name, setName] = useState('')

@@ -1,8 +1,8 @@
 'use client'
 
 import { useTimeAgo } from '@/hooks/useTimeAgo'
-import FadeUp from './animation/FadeUp'
-import { TimeIcon } from './IconsMenu'
+import FadeUp from '../animation/FadeUp'
+import { TimeIcon } from '../IconsMenu'
 
 type Message = {
     id: string

@@ -1,8 +1,8 @@
-import Countdown from "@/components/Countdown";
-import FadeUp from "./animation/FadeUp";
-import FadeLeft from "./animation/FadeLeft";
-import FadeRight from "./animation/FadeRight";
-import BackgroundImage from "./animation/BackgroundImage";
+import Countdown from "@/components/cover/Countdown";
+import FadeUp from "../animation/FadeUp";
+import FadeLeft from "../animation/FadeLeft";
+import FadeRight from "../animation/FadeRight";
+import BackgroundImage from "../animation/BackgroundImage";
 
 const images = [
   "/images/cover-2.avif",

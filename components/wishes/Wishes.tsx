@@ -1,8 +1,9 @@
 'use client'
 
+
 import CommentForm from "./CommentForm"
 import CommentsList from "./CommentsList"
-import BackgroundImage from "./animation/BackgroundImage"
+import BackgroundImage from "../animation/BackgroundImage"
 
 const images = [
   "/images/wishes-1.avif",

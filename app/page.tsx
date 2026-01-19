@@ -1,11 +1,11 @@
 'use client'
 
-import Cover from "@/components/Cover";
+import Cover from "@/components/cover/Cover";
 import Footer from "@/components/Footer";
 import InvitationCoverClient from "@/components/InvitationCoverClient";
 import Menu from "@/components/Menu";
 import MusicButton from "@/components/music/MusicButton";
-import Wishes from "@/components/Wishes";
+import Wishes from "@/components/wishes/Wishes";
 import { Suspense } from "react";
 
 export default function Home() {
