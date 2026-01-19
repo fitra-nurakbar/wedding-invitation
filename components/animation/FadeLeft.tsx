@@ -8,6 +8,7 @@ type FadeUpProps = {
     requireMusic?: boolean
     once?: boolean
     delay?: number
+    className?: string
 }
 
 export default function FadeLeft({
@@ -15,6 +16,7 @@ export default function FadeLeft({
     requireMusic = false,
     once = false,
     delay = 0,
+    className
 }: FadeUpProps) {
     const { opened } = useAnimation()
 
@@ -26,12 +28,13 @@ export default function FadeLeft({
                     ? { opacity: 1, x: 0 }
                     : undefined
             }
-            viewport={{ once, margin: "-100px" }}
+            viewport={{ once, margin: "-50px" }}
             transition={{
                 duration: 1,
                 ease: "easeOut",
                 delay,
             }}
+            className={className}
         >
             {children}
         </motion.div>

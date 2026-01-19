@@ -1,5 +1,6 @@
 'use client';
 
+import { generateGoogleCalendarUrl } from "@/utils/generateGoogleCalenderUrl";
 import { useEffect, useState } from "react";
 
 type TimeLeft = {
@@ -22,9 +23,9 @@ const INITIAL_TIME: TimeLeft = {
 };
 
 export default function Countdown() {
-  const targetDate = new Date("2026-03-29T00:00:00");
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(INITIAL_TIME);
-  const [mounted, setMounted] = useState(false);
+  const targetDate = new Date("2026-03-29T00:00:00")
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(INITIAL_TIME)
+  const [mounted, setMounted] = useState(false)
 
   const calculateTimeLeft = (): TimeLeft => {
     const now = new Date();
@@ -38,30 +39,41 @@ export default function Countdown() {
       minutes: String(Math.floor((diff / 1000 / 60) % 60)).padStart(2, "0"),
       seconds: String(Math.floor((diff / 1000) % 60)).padStart(2, "0"),
     };
-  };
+  }
 
   useEffect(() => {
-    setMounted(true);
-    setTimeLeft(calculateTimeLeft());
+    setMounted(true)
+    setTimeLeft(calculateTimeLeft())
 
     const timer = window.setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+      setTimeLeft(calculateTimeLeft())
+    }, 1000)
 
-    return () => window.clearInterval(timer);
-  }, []);
+    return () => window.clearInterval(timer)
+  }, [])
 
-  if (!mounted) return null; // ⬅️ penting untuk hydration
+  if (!mounted) return null
+
+  const isExpired = new Date() > targetDate
 
   return (
-    <div className="grid grid-cols-4 gap-2">
-      <TimeBox value={timeLeft.days} label="Days" />
-      <TimeBox value={timeLeft.hours} label="Hours" />
-      <TimeBox value={timeLeft.minutes} label="Minutes" />
-      <TimeBox value={timeLeft.seconds} label="Seconds" />
-    </div>
-  );
+    <a
+      href={!isExpired ? generateGoogleCalendarUrl() : undefined}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className="flex flex-col items-center gap-5">
+        <div className="grid grid-cols-4 gap-2">
+          <TimeBox value={timeLeft.days} label="Days" />
+          <TimeBox value={timeLeft.hours} label="Hours" />
+          <TimeBox value={timeLeft.minutes} label="Minutes" />
+          <TimeBox value={timeLeft.seconds} label="Seconds" />
+        </div>
+      </div>
+    </a>
+  )
 }
+
 
 function TimeBox({ value, label }: TimeBoxProps) {
   return (

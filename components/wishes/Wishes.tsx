@@ -16,7 +16,7 @@ export default function Wishes() {
       {/* FORM */}
       <div className="bg-white py-12 px-8">
         <div className="min-h-120 p-5 rounded-lg bg-gray-100 border-2 border-white shadow-xl">
-          <h3 className="font-extralight text-2xl font-yrsa text-center border-b border-gray-200 py-2 mt-5 text-gray-500">
+          <h3 className="font-extralight text-2xl font-ivy-mode text-center border-b border-gray-200 py-2 mt-5 text-gray-500">
             Friends Wishes
           </h3>
 
@@ -44,7 +44,7 @@ export default function Wishes() {
             The Wedding Of
           </p>
 
-          <h3 className="text-4xl font-yrsa mb-10 text-[#6e6e6e]">
+          <h3 className="text-4xl font-ivy-mode mb-10 text-[#6e6e6e]">
             Ifha & Jefri
           </h3>
         </div>

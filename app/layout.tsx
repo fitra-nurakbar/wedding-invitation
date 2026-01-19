@@ -1,18 +1,14 @@
-import type { Metadata } from "next";
-import { Cinzel_Decorative, Poppins, Roboto, Yrsa } from "next/font/google";
-import "./globals.css";
-import { MusicProvider } from "@/components/music/MusicProvider";
 import { AnimationProvider } from "@/components/animation/AnimationProvider";
+import { MusicProvider } from "@/components/music/MusicProvider";
+import { amalfi, ivyMode } from "@/utils/fonts";
+import type { Metadata } from "next";
+import { Cinzel_Decorative, Poppins, Roboto } from "next/font/google";
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   weight: "400",
-});
-
-const yrsa = Yrsa({
-  subsets: ["latin"],
-  variable: "--font-yrsa",
 });
 
 const roboto = Roboto({
@@ -38,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${yrsa.variable} ${roboto.variable} ${cinzel.variable}`}>
+      <body className={`${poppins.variable} ${ivyMode.variable} ${amalfi.variable} ${roboto.variable} ${cinzel.variable} `}>
         <MusicProvider>
           <AnimationProvider>
             {children}

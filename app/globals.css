@@ -11,9 +11,10 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --font-poppins: "Poppins", sans-serif;
-  --font-yrsa: "Yrsa", serif;
   --font-roboto: "Roboto", serif;
   --font-cinzel: "Cinzel Decorative", sans-serif;
+  --font-amalfi: "Amalfi", sans-serif;
+  --font-ivy-mode: "Ivy Mode", serif;
   --animate-scale: animate-scale 3s ease-in-out infinite;
   --animate-fade-in: fadeIn 0.3s ease-out;
   --animate-bg-in: bgIn 2.5s ease-out forwards;
@@ -69,6 +70,6 @@ h2 {
 
 body {
   color: var(--foreground);
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-weight: 400;
 }

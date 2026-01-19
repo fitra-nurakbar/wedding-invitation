@@ -17,7 +17,7 @@ export default function Cover() {
           <p className="text-sm font-roboto font-light tracking-widest mb-3">
             The Wedding Of
           </p>
-          <h2 className="text-4xl font-yrsa mb-10">
+          <h2 className="text-4xl font-ivy-mode mb-10">
             Ifha & Jefri
           </h2>
           <p className="text-lg tracking-widest">Minggu, 29 Maret 2026</p>

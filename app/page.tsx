@@ -1,5 +1,6 @@
 'use client'
 
+import Couple from "@/components/couple/Couple";
 import Cover from "@/components/cover/Cover";
 import Footer from "@/components/Footer";
 import InvitationCoverClient from "@/components/InvitationCoverClient";
@@ -10,7 +11,7 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex justify-center select-none bg-white">
+    <div className="font-poppins min-h-screen flex justify-center select-none bg-white">
       {/* FRAME */}
       <div
         className="
@@ -28,6 +29,7 @@ export default function Home() {
           </Suspense>
           <div id="content">
             <Cover />
+            <Couple />
             <Wishes />
           </div>
           <Footer />

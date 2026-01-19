@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { motion } from "framer-motion";
-import { useAnimation } from "./AnimationProvider";
+import { motion } from "framer-motion"
+import { useAnimation } from "./AnimationProvider"
 
 type FadeUpProps = {
     children: React.ReactNode
@@ -11,7 +11,7 @@ type FadeUpProps = {
     className?: string
 }
 
-export default function FadeRight({
+export default function ScaleUp({
     children,
     requireMusic = false,
     once = false,
@@ -22,15 +22,13 @@ export default function FadeRight({
 
     return (
         <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, scale: 0 }}
             whileInView={
                 !requireMusic || opened
-                    ? { opacity: 1, x: 0 }
+                    ? { opacity: 1, scale: 1 }
                     : undefined
             }
-
             viewport={{ once, margin: "-50px" }}
-
             transition={{
                 duration: 1,
                 ease: "easeOut",
@@ -40,5 +38,5 @@ export default function FadeRight({
         >
             {children}
         </motion.div>
-    );
+    )
 }

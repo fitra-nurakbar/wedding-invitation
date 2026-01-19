@@ -7,6 +7,7 @@ import FadeLeft from './animation/FadeLeft'
 import FadeRight from './animation/FadeRight'
 import FadeUp from './animation/FadeUp'
 import { useMusic } from './music/MusicProvider'
+import { Envelope } from './IconsMenu'
 
 export default function InvitationCover({ guestName }: { guestName: string }) {
   const { opened, openInvitation } = useMusic()
@@ -28,32 +29,44 @@ export default function InvitationCover({ guestName }: { guestName: string }) {
   if (opened) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center h-screen bg-linear-to-b from-gray-100 via-white to-gray-400">
-      <div className="flex flex-col gap-2 justify-center text-center px-6 h-[calc(100vh-5rem)]">
-        <h1 className="flex items-center justify-center text-9xl font-cinzel">
+    <div className="
+      fixed inset-0 z-50
+      flex items-center justify-center
+      h-dvh
+      bg-linear-to-b from-gray-100 via-white to-gray-400
+    ">
+      <div className="
+        flex flex-col justify-center items-center
+        text-center
+        gap-[2vh]
+        px-[6vw]
+        min-h-[85dvh]
+      ">
+        {/* Initial */}
+        <h1 className="flex items-center justify-center font-cinzel text-[12vh] leading-none">
           <FadeLeft>I</FadeLeft>
           <FadeRight>J</FadeRight>
         </h1>
 
         <FadeDown>
-          <p className="text-sm font-roboto tracking-widest text-gray-400">
+          <p className="text-[1.5vh] font-roboto tracking-widest text-gray-400">
             The Wedding Of
           </p>
         </FadeDown>
 
         <FadeUp>
-          <h2 className="text-3xl font-yrsa mb-9">
+          <h2 className="text-[3.5vh] font-ivy-mode mb-[4vh]">
             Ifha & Jefri
           </h2>
         </FadeUp>
 
-        <p className="text-sm">
+        <p className="text-[1.6vh] leading-relaxed">
           Kepada Yth. <br />
           Bapak / Ibu / Saudara / i
         </p>
 
         <FadeDown>
-          <h3 className="text-2xl font-bold px-5">
+          <h3 className="text-[2.5vh] font-bold px-[5vw]">
             {guestName}
           </h3>
         </FadeDown>
@@ -61,12 +74,19 @@ export default function InvitationCover({ guestName }: { guestName: string }) {
         <FadeUp>
           <button
             onClick={handleOpen}
-            className="px-6 py-2 bg-white text-gray-500 text-sm active:scale-110 transition cursor-pointer animate-scale"
+            className="
+              mt-[4vh]
+              px-6 py-2
+              bg-white
+              text-gray-500
+              text-sm
+              active:scale-110
+              transition
+              cursor-pointer
+            "
           >
-            <div className="flex gap-1 items-center ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
-              </svg>
+            <div className="flex gap-2 items-center">
+              <Envelope className="size-5" />
               <span>Buka Undangan</span>
             </div>
           </button>
