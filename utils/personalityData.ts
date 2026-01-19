@@ -7,6 +7,7 @@ export const personalities = {
     image: "/images/bride.webp",
     parent: "Anak ke-3 Dari Bapak Slamet Rianto dan Ibu Ikar kartini",
   },
+
   groom: {
     name: "Jefri",
     fullName: "Jefri Abdullah Iswandi",

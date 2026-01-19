@@ -26,7 +26,7 @@ export default function Personality() {
                     name={groom.name}
                     fullName={groom.fullName}
                     born={groom.born}
-                    parent={bride.parent}
+                    parent={groom.parent}
                 />
             </div>
         </section>
