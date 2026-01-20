@@ -1,8 +1,17 @@
+'use client'
+
 import Countdown from "@/components/cover/Countdown";
 import FadeUp from "../animation/FadeUp";
 import FadeLeft from "../animation/FadeLeft";
 import FadeRight from "../animation/FadeRight";
 import BackgroundImage from "../animation/BackgroundImage";
+import Image from "next/image";
+import FadeDown from "../animation/FadeDown";
+
+const profile = {
+  src: "/images/cover-1.webp",
+  alt: "Ifha & Jefri"
+}
 
 const images = [
   "/images/cover-2.avif",
@@ -13,6 +22,18 @@ export default function Cover() {
   return (
     <section id="cover" className="flex flex-col items-center justify-center">
       <div className="text-center py-10 min-h-screen">
+        <FadeDown requireMusic once className="w-full flex justify-center my-5">
+          <div className="relative w-full max-w-50 max-h-75 aspect-2/4 rounded-full overflow-hidden border-7 border-double border-primary">
+            <Image
+              src={profile.src}
+              alt={profile.alt}
+              fill
+              priority={true}
+              sizes="(max-width: 260px) 40vw, 180px"
+              className="object-cover"
+            />
+          </div>
+        </FadeDown>
         <FadeUp requireMusic once delay={0.3}>
           <p className="text-sm font-roboto font-light tracking-widest mb-3">
             The Wedding Of

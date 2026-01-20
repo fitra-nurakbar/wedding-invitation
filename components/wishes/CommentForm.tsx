@@ -2,7 +2,7 @@
 
 import { submitComment } from '@/app/actions/submitComment'
 import { useEffect, useRef, useState } from 'react'
-import { PersonIcon } from '../IconsMenu'
+import { PersonIcon } from '../../utils/Icons'
 import Alert from '../Alert'
 
 export default function CommentForm() {

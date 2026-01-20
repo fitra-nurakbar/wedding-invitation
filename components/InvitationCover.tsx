@@ -7,7 +7,7 @@ import FadeLeft from './animation/FadeLeft'
 import FadeRight from './animation/FadeRight'
 import FadeUp from './animation/FadeUp'
 import { useMusic } from './music/MusicProvider'
-import { Envelope } from './IconsMenu'
+import { Envelope } from '../utils/Icons'
 
 export default function InvitationCover({ guestName }: { guestName: string }) {
   const { opened, openInvitation } = useMusic()

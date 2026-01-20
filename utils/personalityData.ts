@@ -1,4 +1,3 @@
-// utils/personalityData.ts
 export const personalities = {
   bride: {
     name: "Ifha",

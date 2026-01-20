@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { XMarkIcon } from './IconsMenu'
+import { XMarkIcon } from '../utils/Icons'
 
 type AlertType = 'success' | 'error' | 'info'
 

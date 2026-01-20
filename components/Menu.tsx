@@ -8,7 +8,7 @@ import {
   EventIcon,
   GalleryIcon,
   WhishesIcon,
-} from "@/components/IconsMenu";
+} from "@/utils/Icons";
 
 export default function Menu() {
   return (

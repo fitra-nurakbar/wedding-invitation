@@ -2,7 +2,7 @@
 
 import { useTimeAgo } from '@/hooks/useTimeAgo'
 import FadeUp from '../animation/FadeUp'
-import { TimeIcon } from '../IconsMenu'
+import { TimeIcon } from '../../utils/Icons'
 
 type Message = {
     id: string

@@ -2,6 +2,7 @@
 
 import Couple from "@/components/couple/Couple";
 import Cover from "@/components/cover/Cover";
+import Event from "@/components/event/Event";
 import Footer from "@/components/Footer";
 import InvitationCoverClient from "@/components/InvitationCoverClient";
 import Menu from "@/components/Menu";
@@ -27,11 +28,10 @@ export default function Home() {
           <Suspense fallback={null}>
             <InvitationCoverClient />
           </Suspense>
-          <div id="content">
-            <Cover />
-            <Couple />
-            <Wishes />
-          </div>
+          <Cover />
+          <Couple />
+          <Event />
+          <Wishes />
           <Footer />
           <MusicButton />
         </div>
