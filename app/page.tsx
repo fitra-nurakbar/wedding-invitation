@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import InvitationCoverClient from "@/components/InvitationCoverClient";
 import Menu from "@/components/Menu";
 import MusicButton from "@/components/music/MusicButton";
+import Story from "@/components/story/Story";
 import Wishes from "@/components/wishes/Wishes";
 import { Suspense } from "react";
 
@@ -31,6 +32,8 @@ export default function Home() {
           <Cover />
           <Couple />
           <Event />
+
+          <Story />
           <Wishes />
           <Footer />
           <MusicButton />
