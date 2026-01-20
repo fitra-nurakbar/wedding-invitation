@@ -29,12 +29,12 @@ export default function Cover() {
               alt={profile.alt}
               fill
               priority={true}
-              sizes="(max-width: 260px) 40vw, 180px"
+              sizes="(max-width: 200px) 40vw, 300px"
               className="object-cover"
             />
           </div>
         </FadeDown>
-        <FadeUp requireMusic once delay={0.3}>
+        <FadeUp requireMusic once delay={1}>
           <p className="text-sm font-roboto font-light tracking-widest mb-3">
             The Wedding Of
           </p>
