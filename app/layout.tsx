@@ -59,28 +59,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.jpg",
+        url: "https://wedding-invitation-ifha-jefri.vercel.app/images/cover.jpg",
         secureUrl:
-          "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.jpg",
+          "https://wedding-invitation-ifha-jefri.vercel.app/images/cover.jpg",
         type: "image/jpeg",
-        width: 980,
-        height: 980,
-        alt: "Website Undangan Pernikahan Ifha dan Jefri Secara Online",
-      },
-      {
-        url: "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.png",
-        secureUrl:
-          "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.png",
-        type: "image/png",
-        width: 980,
-        height: 980,
-        alt: "Website Undangan Pernikahan Ifha dan Jefri Secara Online",
-      },
-      {
-        url: "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.webp",
-        secureUrl:
-          "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.webp",
-        type: "image/webp",
         width: 980,
         height: 980,
         alt: "Website Undangan Pernikahan Ifha dan Jefri Secara Online",
@@ -101,11 +83,11 @@ export const metadata: Metadata = {
 
   applicationName: "Website Undangan Pernikahan Ifha dan Jefri Secara Online",
 
-  icons: {
-    icon: "https://wedding-invitation-ifha-jefri.vercel.app/favicon.ico",
-    shortcut: "https://wedding-invitation-ifha-jefri.vercel.app/favicon.ico",
-    apple: "https://wedding-invitation-ifha-jefri.vercel.app/images/icon-192x192.png",
-  },
+  // icons: {
+  //   icon: "https://wedding-invitation-ifha-jefri.vercel.app/favicon.ico",
+  //   shortcut: "https://wedding-invitation-ifha-jefri.vercel.app/favicon.ico",
+  //   apple: "https://wedding-invitation-ifha-jefri.vercel.app/images/icon-192x192.png",
+  // },
 
   appleWebApp: {
     capable: true,
