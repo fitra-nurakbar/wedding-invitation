@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "template website",
     "template website undangan pernikahan",
   ],
-  authors: [{ name: "dewanakl" }],
+  authors: [{ name: "fit.tra_" }],
   robots: {
     index: true,
     follow: true,
@@ -70,9 +70,8 @@ export const metadata: Metadata = {
     ],
   },
 
-  /* === EXTRA META (TIDAK ADA FIELD KHUSUS) === */
   other: {
-    author: "dewanakl",
+    author: "fit.tra_",
     language: "id",
     "og:keywords":
       "undangan, wedding, undangan digital, undangan online, wedding invitation, template undangan, template undangan pernikahan, undangan pernikahan, template undangan online, wedding invitation github, template website, template website undangan pernikahan",
