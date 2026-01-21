@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import FadeUp from '../animation/FadeUp'
+import FadeUp from '../animations/FadeUp'
 
 export default function AttendanceForm() {
     const [name, setName] = useState('')
@@ -36,7 +36,7 @@ export default function AttendanceForm() {
 
     return (
         <section className='bg-[#CACACA] pt-5 pb-15 px-7.5'>
-            <FadeUp requireMusic className="text-sm flex flex-col gap-5">
+            <FadeUp requireMusic delay={0.5} className="text-sm flex flex-col gap-5">
                 <h3 className="text-[#595959] text-center font-extralight text-[27px] font-ivy-mode">
                     Konfirmasi Kehadiran
                 </h3>

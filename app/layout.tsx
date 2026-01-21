@@ -1,4 +1,4 @@
-import { AnimationProvider } from "@/components/animation/AnimationProvider";
+import { AnimationProvider } from "@/components/animations/AnimationProvider";
 import { MusicProvider } from "@/components/music/MusicProvider";
 import { amalfi, ivyMode } from "@/utils/fonts";
 import type { Metadata } from "next";

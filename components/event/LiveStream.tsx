@@ -1,5 +1,5 @@
 import React from 'react'
-import FadeUp from '../animation/FadeUp'
+import FadeUp from '../animations/FadeUp'
 import { InstagramIcon, RecordIcon } from '@/utils/Icons'
 
 export default function LiveStream() {

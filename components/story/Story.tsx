@@ -1,8 +1,8 @@
 import React from 'react'
-import FadeDown from '../animation/FadeDown'
+import FadeDown from '../animations/FadeDown'
 import Image from 'next/image'
-import ScaleUp from '../animation/ScaleUp'
-import FadeUp from '../animation/FadeUp'
+import ScaleUp from '../animations/ScaleUp'
+import FadeUp from '../animations/FadeUp'
 
 const storyImg = {
     src: "/images/story.webp",

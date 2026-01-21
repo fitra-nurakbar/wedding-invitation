@@ -1,6 +1,6 @@
 import Image from "next/image"
-import FadeUp from "../animation/FadeUp"
-import FadeDown from "../animation/FadeDown"
+import FadeUp from "../animations/FadeUp"
+import FadeDown from "../animations/FadeDown"
 
 
 type PersonCardProps = {

@@ -2,7 +2,7 @@
 
 import { personalities } from "@/utils/personalityData"
 import PersonCard from "./PersonCard"
-import FadeUp from "../animation/FadeUp"
+import FadeUp from "../animations/FadeUp"
 
 export default function Personality() {
     const { bride, groom } = personalities

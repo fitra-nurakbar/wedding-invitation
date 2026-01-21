@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useAnimation } from './animation/AnimationProvider'
-import FadeDown from './animation/FadeDown'
-import FadeLeft from './animation/FadeLeft'
-import FadeRight from './animation/FadeRight'
-import FadeUp from './animation/FadeUp'
+import { useAnimation } from './animations/AnimationProvider'
+import FadeDown from './animations/FadeDown'
+import FadeLeft from './animations/FadeLeft'
+import FadeRight from './animations/FadeRight'
+import FadeUp from './animations/FadeUp'
 import { useMusic } from './music/MusicProvider'
 import { Envelope } from '../utils/Icons'
 

@@ -1,8 +1,8 @@
 import { EventDetail } from '@/utils/types/eventDetails'
 import { MapPin, TimeIcon } from '../../utils/Icons'
-import ScaleUp from '../animation/ScaleUp'
-import FadeDown from '../animation/FadeDown'
-import FadeUp from '../animation/FadeUp'
+import ScaleUp from '../animations/ScaleUp'
+import FadeDown from '../animations/FadeDown'
+import FadeUp from '../animations/FadeUp'
 
 type EventCardProps = {
   data: EventDetail

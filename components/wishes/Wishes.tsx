@@ -3,7 +3,7 @@
 
 import CommentForm from "./CommentForm"
 import CommentsList from "./CommentsList"
-import BackgroundImage from "../animation/BackgroundImage"
+import BackgroundImage from "../animations/BackgroundImage"
 
 const images = [
   "/images/wishes-1.avif",
@@ -14,7 +14,7 @@ export default function Wishes() {
   return (
     <section id="wishes">
       {/* FORM */}
-      <div className="bg-white py-12 px-8">
+      <div className="bg-linear-to-b from-gray-100 to-white py-12 px-8">
         <div className="min-h-120 p-5 rounded-lg bg-gray-100 border-2 border-white shadow-xl">
           <h3 className="font-extralight text-2xl font-ivy-mode text-center border-b border-gray-200 py-2 mt-5 text-gray-500">
             Friends Wishes

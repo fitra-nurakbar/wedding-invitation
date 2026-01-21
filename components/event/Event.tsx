@@ -1,5 +1,5 @@
 import { eventDetails } from '@/utils/eventDetails'
-import FadeUp from '../animation/FadeUp'
+import FadeUp from '../animations/FadeUp'
 import EventCard from './EventCard'
 import LiveStream from './LiveStream'
 

@@ -1,12 +1,12 @@
 'use client'
 
 import Countdown from "@/components/cover/Countdown";
-import FadeUp from "../animation/FadeUp";
-import FadeLeft from "../animation/FadeLeft";
-import FadeRight from "../animation/FadeRight";
-import BackgroundImage from "../animation/BackgroundImage";
+import FadeUp from "../animations/FadeUp";
+import FadeLeft from "../animations/FadeLeft";
+import FadeRight from "../animations/FadeRight";
+import BackgroundImage from "../animations/BackgroundImage";
 import Image from "next/image";
-import FadeDown from "../animation/FadeDown";
+import FadeDown from "../animations/FadeDown";
 
 const profile = {
   src: "/images/cover-1.webp",
