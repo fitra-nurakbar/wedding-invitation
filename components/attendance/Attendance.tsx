@@ -46,7 +46,7 @@ export default function AttendanceForm() {
                 </p>
                 <form
                     onSubmit={handleSubmit}
-                    className="text-[#7A7A7A] flex flex-col gap-5"
+                    className="text-[#7A7A7A] flex flex-col gap-3"
                 >
                     {/* NAMA */}
                     <input
@@ -62,16 +62,23 @@ export default function AttendanceForm() {
                     <div className="flex gap-2 items-end">
                         <div className="flex-1">
                             <label className="text-[10px]">Konfirmasi</label>
-                            <select
-                                value={status}
-                                onChange={(e) => setStatus(e.target.value)}
-                                className="bg-white w-full p-2.5 rounded-xs border focus:outline-none"
-                                required
-                            >
-                                <option value="">Pilih</option>
-                                <option value="hadir">Bersedia Hadir</option>
-                                <option value="tidak_hadir">Belum Bisa Hadir</option>
-                            </select>
+                            <div className="relative">
+                                <select
+                                    value={status}
+                                    onChange={(e) => setStatus(e.target.value)}
+                                    className=" appearance-none bg-white w-full p-2.5 pr-10 rounded-xs border focus:outline-none mt-1"
+                                    required
+                                >
+                                    <option value="">Pilih Konfirmasi</option>
+                                    <option value="hadir">Bersedia Hadir</option>
+                                    <option value="tidak_hadir">Belum Bisa Hadir</option>
+                                </select>
+
+                                {/* Icon dropdown */}
+                                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                                    ▼
+                                </span>
+                            </div>
                         </div>
 
                         <div className="w-22.5">
@@ -85,7 +92,7 @@ export default function AttendanceForm() {
                                 onChange={(e) => setCount(Number(e.target.value))}
                                 className="
                 bg-white w-full p-2.5 rounded-xs border focus:outline-none
-                disabled:bg-gray-100 disabled:text-gray-400
+                disabled:bg-gray-100 disabled:text-gray-400 mt-1
               "
                             />
                         </div>
