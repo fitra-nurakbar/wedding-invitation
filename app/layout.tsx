@@ -59,10 +59,19 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://wedding-invitation-ifha-jefri.vercel.app/images/gallery-1.webp",
+        url: "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.webp",
         secureUrl:
-          "https://wedding-invitation-ifha-jefri.vercel.app/images/gallery-1.webp",
+          "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.webp",
         type: "image/webp",
+        width: 980,
+        height: 980,
+        alt: "Website Undangan Pernikahan Ifha dan Jefri Secara Online",
+      },
+      {
+        url: "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.jpg",
+        secureUrl:
+          "https://wedding-invitation-ifha-jefri.vercel.app/images/cover-1.jpg",
+        type: "image/jpeg",
         width: 980,
         height: 980,
         alt: "Website Undangan Pernikahan Ifha dan Jefri Secara Online",
