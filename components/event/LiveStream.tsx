@@ -14,7 +14,7 @@ export default function LiveStream() {
                 </div>
                 <p className='text-xs'>Kami mengajak anda yang tidak bisa hadir langsung untuk bergabung pada momen spesial kami melalui siaran langsung secara virtual dengan klik tombol berikut:</p>
                 <button className='text-[13px] mx-auto'>
-                    <a href="" className='bg-white text-[#727272] flex gap-2 items-center border border-[#727272] py-2.5 px-5'>
+                    <a href="https://www.instagram.com/ifhasim" target='_blank' className='bg-white text-[#727272] flex gap-2 items-center border border-[#727272] py-2.5 px-5'>
                         <InstagramIcon className='size-4' /> Instagram
                     </a>
                 </button>

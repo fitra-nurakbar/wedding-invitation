@@ -1,12 +1,15 @@
 'use client'
 
+import Attendance from "@/components/attendance/Attendance";
 import Couple from "@/components/couple/Couple";
 import Cover from "@/components/cover/Cover";
 import Event from "@/components/event/Event";
 import Footer from "@/components/Footer";
+import Gift from "@/components/gift/Gift";
 import InvitationCoverClient from "@/components/InvitationCoverClient";
 import Menu from "@/components/Menu";
 import MusicButton from "@/components/music/MusicButton";
+import Rhombus from "@/components/Rhombus";
 import Story from "@/components/story/Story";
 import Wishes from "@/components/wishes/Wishes";
 import { Suspense } from "react";
@@ -34,6 +37,9 @@ export default function Home() {
           <Event />
 
           <Story />
+          <Attendance />
+          <Rhombus />
+          <Gift />
           <Wishes />
           <Footer />
           <MusicButton />

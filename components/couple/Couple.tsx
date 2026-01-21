@@ -10,7 +10,7 @@ export default function Personality() {
     return (
         <section id="couple" className="bg-white text-center py-16 px-6">
             <FadeUp>
-                <h3 className="text-sm text-[#777777] mb-16">Tanpa mengurangi rasa hormat dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami</h3>
+                <h3 className="text-sm text-[#777777] mb-12">Tanpa mengurangi rasa hormat dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami</h3>
             </FadeUp>
             <div className="flex flex-col gap-16">
                 <PersonCard
