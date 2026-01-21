@@ -1,10 +1,9 @@
-'use client'
-
 import Attendance from "@/components/attendance/Attendance";
 import Couple from "@/components/couple/Couple";
 import Cover from "@/components/cover/Cover";
 import Event from "@/components/event/Event";
 import Footer from "@/components/Footer";
+import Gallery from "@/components/gallery/Gallery";
 import Gift from "@/components/gift/Gift";
 import InvitationCoverClient from "@/components/InvitationCoverClient";
 import Menu from "@/components/Menu";
@@ -35,7 +34,7 @@ export default function Home() {
           <Cover />
           <Couple />
           <Event />
-
+          <Gallery />
           <Story />
           <Attendance />
           <Rhombus />
