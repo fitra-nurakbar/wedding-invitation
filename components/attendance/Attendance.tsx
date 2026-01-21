@@ -96,8 +96,8 @@ export default function AttendanceForm() {
                         type="submit"
                         disabled={!name || !status}
                         className="
-            w-full py-2 bg-[#333333] text-white
-            disabled:opacity-50 transition
+            w-full py-2.5 px-5 bg-[#333333] text-white text-xs
+            disabled:opacity-50 transition font-semibold
           "
                     >
                         Kirim Konfirmasi
