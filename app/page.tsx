@@ -34,7 +34,7 @@ export default function Home() {
           <Cover />
           <Couple />
           <Event />
-          {/* <Gallery /> */}
+          <Gallery />
           <Story />
           <Attendance />
           <Rhombus />

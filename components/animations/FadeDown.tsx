@@ -1,22 +1,23 @@
 'use client';
 
-import { motion } from "framer-motion";
+import { HTMLMotionProps, motion } from "framer-motion";
 import { useAnimation } from "./AnimationProvider";
 
 type FadeUpProps = {
-    children: React.ReactNode
     requireMusic?: boolean
     once?: boolean
     delay?: number
-    className?: string
-}
+    duration?: number
+} & HTMLMotionProps<'div'>
 
 export default function FadeDown({
     children,
     requireMusic = false,
     once = false,
     delay = 0,
-    className
+    duration = 1,
+    className,
+    ...rest
 }: FadeUpProps) {
     const { opened } = useAnimation()
 
@@ -30,11 +31,12 @@ export default function FadeDown({
             }
             viewport={{ once, margin: "-50px" }}
             transition={{
-                duration: 1,
+                duration,
                 ease: "easeOut",
                 delay,
             }}
             className={className}
+            {...rest}
         >
             {children}
         </motion.div>
