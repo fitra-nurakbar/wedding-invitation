@@ -7,14 +7,29 @@ import ScaleUp from '../animations/ScaleUp'
 import FadeUp from '../animations/FadeUp'
 
 const images = [
-    '/images/story.webp',
+    '/images/gallery.webp',
     '/images/gallery-1.webp',
     '/images/gallery-2.webp',
     '/images/gallery-3.webp',
     '/images/gallery-4.webp',
     '/images/gallery-5.webp',
     '/images/gallery-6.webp',
+    '/images/gallery-7.webp',
+    '/images/gallery-8.webp',
+    '/images/gallery-9.webp',
+    '/images/gallery-10.webp',
+    '/images/gallery-11.webp',
+    '/images/gallery-12.webp',
+    '/images/gallery-13.webp',
+    '/images/gallery-14.webp',
 ]
+
+const HERO_INTERVAL = 7;
+
+const heroIndexes = images
+    .map((_, i) => i)
+    .filter((i) => i % HERO_INTERVAL === 0)
+
 
 const swipeThreshold = 80
 
@@ -39,7 +54,6 @@ export default function Gallery() {
     const [zoomed, setZoomed] = useState(false)
     const [zoomOrigin, setZoomOrigin] = useState({ x: '50%', y: '50%' })
 
-    /* 🔁 Infinite pagination */
     const paginate = (dir: 1 | -1) => {
         if (activeIndex === null) return
         setDirection(dir)
@@ -50,13 +64,11 @@ export default function Gallery() {
         )
     }
 
-    /* 👉 Swipe handling */
     const handleDragEnd = (_: any, info: PanInfo) => {
         if (info.offset.x < -swipeThreshold) paginate(1)
         if (info.offset.x > swipeThreshold) paginate(-1)
     }
 
-    /* 🔍 Zoom based on click position */
     const handleZoomToggle = (e: React.MouseEvent<HTMLDivElement>) => {
         const rect = e.currentTarget.getBoundingClientRect()
 
@@ -80,40 +92,57 @@ export default function Gallery() {
                 </FadeUp>
 
                 <div className="grid gap-1">
-                    <ScaleUp once className='cursor-pointer'>
-                        <Image
-                            src={images[0]}
-                            alt="Hero"
-                            width={1200}
-                            height={800}
-                            priority={true}
-                            className="w-full h-auto"
-                            onClick={() => setActiveIndex(0)}
-                        />
-                    </ScaleUp>
-                    <div className="columns-2 gap-1 space-y-1">
-                        {images.slice(1).map((src, i) => (
-                            <ScaleUp
-                                once
-                                key={i}
-                                className="break-inside-avoid cursor-pointer"
-                                onClick={() => setActiveIndex(i)}
-                            >
-                                <Image
-                                    src={src}
-                                    alt={`Gallery ${i + 1}`}
-                                    width={800}
-                                    height={1200}
-                                    priority={true}
-                                    className="w-full h-auto rounded-xs"
-                                />
-                            </ScaleUp>
-                        ))}
-                    </div>
+                    {heroIndexes.map((heroIndex) => {
+                        const heroSrc = images[heroIndex]
+                        const collageImages = images.slice(
+                            heroIndex + 1,
+                            heroIndex + HERO_INTERVAL
+                        )
+
+                        return (
+                            <div key={heroIndex} className="grid gap-1">
+                                <ScaleUp once className="cursor-pointer">
+                                    <Image
+                                        src={heroSrc}
+                                        alt="Hero"
+                                        width={1200}
+                                        height={800}
+                                        priority
+                                        className="w-full h-auto rounded-xs"
+                                        onClick={() => setActiveIndex(heroIndex)}
+                                    />
+                                </ScaleUp>
+                                {collageImages.length > 0 && (
+                                    <div className="columns-2 gap-1 space-y-1">
+                                        {collageImages.map((src, i) => {
+                                            const realIndex = heroIndex + 1 + i
+
+                                            return (
+                                                <ScaleUp
+                                                    once
+                                                    key={realIndex}
+                                                    className="break-inside-avoid cursor-pointer"
+                                                    onClick={() => setActiveIndex(realIndex)}
+                                                >
+                                                    <Image
+                                                        src={src}
+                                                        alt={`Gallery ${realIndex + 1}`}
+                                                        width={800}
+                                                        height={1200}
+                                                        priority
+                                                        className="w-full h-auto rounded-xs"
+                                                    />
+                                                </ScaleUp>
+                                            )
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
 
-            {/* 🔲 LIGHTBOX */}
             {activeIndex !== null && (
                 <ScaleUp
                     duration={0.3}
@@ -137,7 +166,6 @@ export default function Gallery() {
                             ✕
                         </button>
 
-                        {/* 🔢 COUNTER */}
                         <div className="absolute left-4 top-4 z-60 text-sm text-white">
                             {activeIndex + 1} / {images.length}
                         </div>
@@ -155,7 +183,6 @@ export default function Gallery() {
                             ›
                         </button>
 
-                        {/* 🖼 SLIDER */}
                         <AnimatePresence initial={false} custom={direction}>
                             <motion.div
                                 key={activeIndex}
@@ -178,7 +205,6 @@ export default function Gallery() {
                                     }`}
                                 onDoubleClick={handleZoomToggle}
                             >
-                                {/* 🔍 ZOOM CONTAINER */}
                                 <div
                                     className="relative w-full h-full transition-transform duration-300"
                                     style={{
