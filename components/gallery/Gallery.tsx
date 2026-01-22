@@ -21,7 +21,6 @@ const images = [
     '/images/gallery-11.webp',
     '/images/gallery-12.webp',
     '/images/gallery-13.webp',
-    '/images/gallery-14.webp',
 ]
 
 const HERO_INTERVAL = 7;
