@@ -7,7 +7,7 @@ type FadeUpProps = {
     requireMusic?: boolean
     once?: boolean
     delay?: number
-    duration: number
+    duration?: number
 } & HTMLMotionProps<'div'>
 
 export default function FadeLeft({
