@@ -13,6 +13,7 @@ const images = [
     '/images/gallery-3.webp',
     '/images/gallery-4.webp',
     '/images/gallery-5.webp',
+    '/images/gallery-6.webp',
 ]
 
 const swipeThreshold = 80
@@ -91,7 +92,7 @@ export default function Gallery() {
                         />
                     </ScaleUp>
                     <div className="columns-2 gap-1 space-y-1">
-                        {images.map((src, i) => (
+                        {images.slice(1).map((src, i) => (
                             <ScaleUp
                                 once
                                 key={i}
