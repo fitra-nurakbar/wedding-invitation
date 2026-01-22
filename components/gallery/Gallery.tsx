@@ -85,6 +85,7 @@ export default function Gallery() {
                             alt="Hero"
                             width={1200}
                             height={800}
+                            priority={true}
                             className="w-full h-auto"
                             onClick={() => setActiveIndex(0)}
                         />
@@ -102,6 +103,7 @@ export default function Gallery() {
                                     alt={`Gallery ${i + 1}`}
                                     width={800}
                                     height={1200}
+                                    priority={true}
                                     className="w-full h-auto rounded-xs"
                                 />
                             </ScaleUp>
