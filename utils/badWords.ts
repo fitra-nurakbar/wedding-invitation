@@ -77,7 +77,7 @@ const badWords = [
   'hell'
 ]
 
-// 🔹 Normalisasi teks (anti-trik)
+// Normalisasi teks (anti-trik)
 const normalize = (text: string) =>
   text
     .toLowerCase()
@@ -87,7 +87,7 @@ const normalize = (text: string) =>
     .replace(/[1]/g, 'i')
     .replace(/[*_\-.]/g, '')
 
-// 🔹 Validasi utama
+// Validasi utama
 export function containsBadWords(text: string): boolean {
   const cleanText = normalize(text)
 
