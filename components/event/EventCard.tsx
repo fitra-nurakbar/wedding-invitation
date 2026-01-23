@@ -1,5 +1,5 @@
 import { EventDetail } from '@/utils/types/eventDetails'
-import { MapPin, TimeIcon } from '../../utils/Icons'
+import { MapPin, SeparatorIcon, TimeIcon } from '../../utils/Icons'
 import ScaleUp from '../animations/ScaleUp'
 import FadeDown from '../animations/FadeDown'
 import FadeUp from '../animations/FadeUp'
@@ -15,11 +15,11 @@ export default function EventCard({ data }: EventCardProps) {
       <FadeDown requireMusic delay={1}>
         <h2 className="font-ivy-mode text-[34px]">{data.title}</h2>
       </FadeDown>
-      <span className='h-8'></span>
+      <SeparatorIcon className='w-full'/>
       <ScaleUp requireMusic delay={0.3}>
         <h3 className='text-[20px]'>{data.date}</h3>
       </ScaleUp>
-      <span className='h-8'></span>
+      <SeparatorIcon className='w-full -scale-100'/>
       <FadeUp requireMusic delay={0.3} className='flex items-center text-[#696969] mx-auto gap-2'>
         <TimeIcon className="size-4" />
         <span className='text-sm tracking-widest'>{data.time}</span>

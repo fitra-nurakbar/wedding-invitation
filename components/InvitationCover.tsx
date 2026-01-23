@@ -7,7 +7,8 @@ import FadeLeft from './animations/FadeLeft'
 import FadeRight from './animations/FadeRight'
 import FadeUp from './animations/FadeUp'
 import { useMusic } from './music/MusicProvider'
-import { Envelope } from '../utils/Icons'
+import { Envelope, SeparatorIcon } from '../utils/Icons'
+import ScaleUp from './animations/ScaleUp'
 
 export default function InvitationCover({ guestName }: { guestName: string }) {
   const { opened, openInvitation } = useMusic()
@@ -47,7 +48,9 @@ export default function InvitationCover({ guestName }: { guestName: string }) {
           <FadeLeft>I</FadeLeft>
           <FadeRight>J</FadeRight>
         </h1>
-
+        <ScaleUp>
+          <SeparatorIcon className='max-w-[35vh]' />
+        </ScaleUp>
         <FadeDown>
           <p className="text-[1.5vh] font-roboto tracking-widest text-gray-400">
             The Wedding Of

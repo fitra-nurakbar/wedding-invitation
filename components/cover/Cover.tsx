@@ -7,6 +7,7 @@ import FadeRight from "../animations/FadeRight";
 import BackgroundImage from "../animations/BackgroundImage";
 import Image from "next/image";
 import FadeDown from "../animations/FadeDown";
+import { SeparatorIcon } from "@/utils/Icons";
 
 const profile = {
   src: "/images/cover-1.webp",
@@ -34,7 +35,7 @@ export default function Cover() {
             />
           </div>
         </FadeDown>
-        <FadeUp requireMusic once delay={1}>
+        <FadeUp requireMusic once delay={1} >
           <p className="text-sm font-roboto font-light tracking-widest mb-3">
             The Wedding Of
           </p>
@@ -42,6 +43,7 @@ export default function Cover() {
             Ifha & Jefri
           </h2>
           <p className="text-lg tracking-widest">Minggu, 29 Maret 2026</p>
+          <SeparatorIcon className="max-w-65" />
           <h3 className="font-roboto font-light tracking-widest text-lg my-3">
             SAVE THE DATE
           </h3>
