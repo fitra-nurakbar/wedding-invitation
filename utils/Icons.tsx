@@ -198,3 +198,30 @@ export const CopyIcon: React.FC<IconProps> = ({ className }) => {
         </svg>
     )
 }
+
+export const LogoIcon: React.FC<IconProps> = ({ className }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlSpace="preserve"
+        width="25.4mm"
+        height="25.4mm"
+        viewBox="0 0 183.65 183.65"
+        style={{
+            shapeRendering: "geometricPrecision",
+            textRendering: "geometricPrecision",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+        }}
+        className={className}
+    >
+        <g id="Layer_x0020_1">
+            <g id="_1780017149344" fill="white">
+                <polygon points="115.36,42.2 136.98,140.01 101.64,48.77" />
+                <polygon points="89.03,54.81 130.06,160.75 66.91,65.39" />
+                <polygon points="49.6,73.68 122.43,183.65 57.07,118.28 24.49,85.7" />
+                <polygon points="18.05,79.27 0,61.22 91.82,30.61 183.65,0" />
+                <polygon points="59.04,120.26 48.08,109.29 103.84,90.71 159.61,72.12" />
+            </g>
+        </g>
+    </svg>
+);
