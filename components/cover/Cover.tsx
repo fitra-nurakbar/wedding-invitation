@@ -7,7 +7,7 @@ import FadeRight from "../animations/FadeRight";
 import BackgroundImage from "../animations/BackgroundImage";
 import Image from "next/image";
 import FadeDown from "../animations/FadeDown";
-import { SeparatorIcon } from "@/utils/Icons";
+import { SeparatorIcon, Tent } from "@/utils/Icons";
 
 const profile = {
   src: "/images/cover-1.webp",
@@ -50,9 +50,9 @@ export default function Cover() {
           <Countdown />
         </FadeUp>
       </div>
-      <div className="relative h-125">
+      <div className="relative h-120">
         <BackgroundImage images={images} gradient="rounded" />
-        <div className="relative flex flex-col items-center justify-between text-center px-5 py-10 h-full">
+        <div className="relative flex flex-col items-center justify-center gap-10 text-center px-5 py-10 h-full">
           <div className="text-white flex justify-center items-center">
             <FadeLeft requireMusic>
               <h3 className='text-7xl font-cinzel mb-5'>I</h3>
@@ -63,18 +63,14 @@ export default function Cover() {
           </div>
           <FadeUp requireMusic>
             <p className="text-sm text-white">
-              <q>Dan di antara tanda-tanda (kebesaran)-
-                Nya ialah Dia menciptakan pasangan-
-                pasangan untukmu dari jenismu sendiri,
-                agar kamu cenderung dan merasa
-                tenteram kepadanya, dan Dia menjadikan
-                di antaramu rasa kasih dan sayang.</q>
+              <q>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.</q>
               <br />
               <br />
               (QS. Ar-Rum: 21)
             </p>
           </FadeUp>
         </div>
+        <Tent className="absolute w-full inset-0 z-40 -top-1 m-0 p-0 text-gray-100" />
       </div>
     </section>
   );
