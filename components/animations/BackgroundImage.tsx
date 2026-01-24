@@ -34,7 +34,7 @@ export default function BackgroundImage({
     }, [images.length, interval])
 
     return (
-        <div className="absolute inset-0 overflow-hidden z-8">
+        <div className="absolute inset-0 overflow-hidden">
             {images.map((src, i) => (
                 <div
                     key={src}
