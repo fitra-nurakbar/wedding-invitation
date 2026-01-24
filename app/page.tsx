@@ -9,6 +9,7 @@ import InvitationCoverClient from "@/components/InvitationCoverClient";
 import Menu from "@/components/Menu";
 import MusicButton from "@/components/music/MusicButton";
 import Rhombus from "@/components/Rhombus";
+import ScrollToTop from "@/components/ScrollToTop";
 import Story from "@/components/story/Story";
 import Wishes from "@/components/wishes/Wishes";
 import { Suspense } from "react";
@@ -28,6 +29,7 @@ export default function Home() {
       >
         {/* SCROLL AREA */}
         <div className="max-w-sm sm:max-h-screen sm:overflow-y-auto relative">
+          <ScrollToTop />
           <Suspense fallback={null}>
             <InvitationCoverClient />
           </Suspense>
