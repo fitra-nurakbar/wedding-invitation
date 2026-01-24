@@ -1,8 +1,9 @@
 import { AnimationProvider } from "@/components/animations/AnimationProvider";
 import { MusicProvider } from "@/components/music/MusicProvider";
 import { amalfi, ivyMode } from "@/utils/fonts";
-import type { Metadata } from "next";
 import { Cinzel_Decorative, Poppins, Roboto } from "next/font/google";
+import ScrollToTop from "@/components/ScrollToTop";
+import type { Metadata } from "next";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -132,7 +133,9 @@ export default function RootLayout({
         `}
       >
         <MusicProvider>
-          <AnimationProvider>{children}</AnimationProvider>
+          <AnimationProvider>
+            <ScrollToTop />
+            {children}</AnimationProvider>
         </MusicProvider>
       </body>
     </html>

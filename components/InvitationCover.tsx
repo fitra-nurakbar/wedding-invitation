@@ -115,13 +115,15 @@ export default function InvitationCover({ guestName }: { guestName: string }) {
 
       <div className={`
             fixed inset-y-0 left-0 z-5
-            w-1/2 bg-white
+            backdrop-blur-xs
+            w-1/2 bg-linear-to-b from-0% to-gray-100
             origin-left
             ${showCurtain && ('animate-curtain-left')}
           `} />
       <div className={`
             fixed inset-y-0 right-0 z-5
-            w-1/2 bg-white
+            backdrop-blur-xs
+            w-1/2 bg-linear-to-b from-0% to-gray-100
             origin-right
             ${showCurtain && ('animate-curtain-right')}
           `} />

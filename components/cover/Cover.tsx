@@ -70,7 +70,7 @@ export default function Cover() {
             </p>
           </FadeUp>
         </div>
-        <Tent className="absolute w-full inset-0 z-10 -top-1 m-0 p-0 text-gray-100" />
+        <Tent className="absolute w-full inset-0 z-10 -top-1 m-0 p-0 text-white" />
       </div>
     </section>
   );

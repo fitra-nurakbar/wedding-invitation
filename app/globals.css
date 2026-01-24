@@ -96,4 +96,5 @@ h2 {
 body {
   color: var(--foreground);
   font-weight: 400;
+  margin: 0;
 }

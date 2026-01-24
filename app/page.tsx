@@ -15,7 +15,7 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="font-poppins min-h-screen flex justify-center select-none bg-gray-100">
+    <div className="font-poppins min-h-screen flex justify-center select-none bg-white">
       {/* FRAME */}
       <div
         className="

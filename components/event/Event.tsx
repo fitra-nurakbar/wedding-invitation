@@ -5,7 +5,7 @@ import LiveStream from './LiveStream'
 
 export default function Event() {
     return (
-        <section id='event'>
+        <section id='event' className='-top-1'>
             <div className="relative bg-[#DFD8D1] px-5 py-10">
                 <FadeUp requireMusic>
                     <div className='flex items-center'>
