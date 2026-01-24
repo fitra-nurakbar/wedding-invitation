@@ -78,7 +78,7 @@ export default function Cover() {
         <BackgroundImage images={images} gradient="rounded" />
         <Tent className="absolute w-full inset-0 z-10 -top-1 text-white" />
 
-        <div className="relative flex flex-col items-center justify-end gap-10 text-center px-5 py-10 h-full">
+        <div className="relative flex flex-col items-center justify-between text-center px-5 py-10 h-full">
           <div className="relative text-white flex justify-center items-center">
             <FadeLeft requireMusic>
               <h3 className='text-7xl font-cinzel mb-5'>I</h3>
