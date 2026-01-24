@@ -8,6 +8,7 @@ type ScaleUpProps = {
   once?: boolean
   delay?: number
   duration?: number
+  opacity?: number
 } & HTMLMotionProps<'div'>
 export default function ScaleUp({
   children,
@@ -15,6 +16,7 @@ export default function ScaleUp({
   once = false,
   delay = 0,
   duration = 1,
+  opacity = 0,
   className,
   ...rest 
 }: ScaleUpProps) {
@@ -22,7 +24,7 @@ export default function ScaleUp({
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
+      initial={{ opacity, scale: 0.9 }}
       whileInView={
         !requireMusic || opened
           ? { opacity: 1, scale: 1 }

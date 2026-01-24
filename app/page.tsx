@@ -29,7 +29,6 @@ export default function Home() {
       >
         {/* SCROLL AREA */}
         <div className="max-w-sm sm:max-h-screen sm:overflow-y-auto relative">
-          <ScrollToTop />
           <Suspense fallback={null}>
             <InvitationCoverClient />
           </Suspense>

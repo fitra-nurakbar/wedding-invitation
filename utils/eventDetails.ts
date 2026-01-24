@@ -8,6 +8,7 @@ export const eventDetails: EventDetail[] = [
     place: "Kediaman Mempelai Wanita",
     address: "Lingk. Lembur Balong RT.01/RW.08 - Kota Banjar",
     mapUrl: "https://goo.gl/maps/wRyvokGq3bsBueJE9?g_st=awb",
+    position: "left",
   },
   {
     title: "Resepsi",
@@ -16,6 +17,7 @@ export const eventDetails: EventDetail[] = [
     place: "Kediaman Mempelai Wanita",
     address: "Lingk. Lembur Balong RT.01/RW.08 - Kota Banjar",
     mapUrl: "https://goo.gl/maps/wRyvokGq3bsBueJE9?g_st=awb",
+    position: "center",
   },
   {
     title: "Ngunduh Mantu",
@@ -24,5 +26,6 @@ export const eventDetails: EventDetail[] = [
     place: "Kediaman Mempelai Pria",
     address: "JL. Pasir Impun, Komplek Taman Melati, Blok C2 NO. 13 - Kab. Bandung",
     mapUrl: "https://goo.gl/maps/eq86nYDYvC457E639?g_st=aw",
+    position: "right",
   },
 ]

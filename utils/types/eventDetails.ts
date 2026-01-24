@@ -4,5 +4,6 @@ export type EventDetail = {
   time?: string        
   place?: string      
   address?: string
-  mapUrl?: string     
+  mapUrl?: string   
+  position?: string  
 }

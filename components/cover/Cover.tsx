@@ -19,23 +19,46 @@ const images = [
   "/images/cover-3.avif"
 ]
 
+const background = {
+  src: "/images/bg-1.avif",
+  alt: "rumah palembang"
+}
+
 export default function Cover() {
   return (
-    <section id="cover" className="flex flex-col items-center justify-center">
-      <div className="text-center py-10 min-h-screen">
-        <FadeDown requireMusic once delay={3} className="w-full flex justify-center my-5">
+    <section
+      id="cover"
+      className="relative flex flex-col items-center justify-center overflow-visible bg-black"
+    >
+
+      <div className="relative flex flex-col items-center text-center py-10 w-full min-h-screen z-5">
+        <div className="absolute -inset-px overflow-visible">
+          <Image
+            src={background.src}
+            alt={background.alt}
+            fill
+            priority
+            className="object-cover object-[47%_center]"
+          />
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-linear-to-b from-transparent to-white" />
+        </div>
+
+        <FadeDown requireMusic once delay={3} className="relative w-full flex justify-center my-5">
           <div className="relative w-full max-w-50 max-h-75 aspect-2/4 rounded-full overflow-hidden border-7 border-double border-primary">
             <Image
               src={profile.src}
               alt={profile.alt}
               fill
-              priority={true}
+              priority
               sizes="(max-width: 200px) 40vw, 300px"
               className="object-cover"
             />
           </div>
         </FadeDown>
-        <FadeUp requireMusic once delay={4} >
+
+        <FadeUp requireMusic once delay={4} className="relative">
           <p className="text-sm font-roboto font-light tracking-widest mb-3">
             The Wedding Of
           </p>
@@ -50,10 +73,13 @@ export default function Cover() {
           <Countdown />
         </FadeUp>
       </div>
-      <div className="relative h-100">
+
+      <div className="relative h-100 w-full">
         <BackgroundImage images={images} gradient="rounded" />
+        <Tent className="absolute w-full inset-0 z-10 -top-1 text-white" />
+
         <div className="relative flex flex-col items-center justify-end gap-10 text-center px-5 py-10 h-full">
-          <div className="text-white flex justify-center items-center">
+          <div className="relative text-white flex justify-center items-center">
             <FadeLeft requireMusic>
               <h3 className='text-7xl font-cinzel mb-5'>I</h3>
             </FadeLeft>
@@ -61,17 +87,16 @@ export default function Cover() {
               <h3 className='text-7xl font-cinzel mt-5'>J</h3>
             </FadeRight>
           </div>
-          <FadeUp requireMusic>
+
+          <FadeUp requireMusic className="relative">
             <p className="text-sm/tight font-normal text-white">
               Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
-              <br />
-              <br />
+              <br /><br />
               (QS. Ar-Rum: 21)
             </p>
           </FadeUp>
         </div>
-        <Tent className="absolute w-full inset-0 z-10 -top-1 m-0 p-0 text-white" />
       </div>
     </section>
-  );
+  )
 }
