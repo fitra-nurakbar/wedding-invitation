@@ -24,7 +24,7 @@ export default function EventCard({ data }: EventCardProps) {
           alt={background.alt}
           fill
           priority
-          className={`object-cover object-${data.position}`}
+          className={`object-cover ${data.position}`}
         />
 
         {/* Gradient overlay */}
