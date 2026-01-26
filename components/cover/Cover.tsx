@@ -8,6 +8,7 @@ import BackgroundImage from "../animations/BackgroundImage";
 import Image from "next/image";
 import FadeDown from "../animations/FadeDown";
 import { SeparatorIcon, Tent } from "@/utils/Icons";
+import { useMusic } from "../music/MusicProvider";
 
 const profile = {
   src: "/images/cover-1.webp",
@@ -25,25 +26,24 @@ const background = {
 }
 
 export default function Cover() {
+  const { opened } = useMusic()
+
   return (
     <section
       id="cover"
-      className="relative flex flex-col items-center justify-center overflow-visible bg-black"
+      className="relative flex flex-col items-center justify-center overflow-visible bg-white"
     >
-
       <div className="relative flex flex-col items-center text-center py-10 w-full min-h-screen z-5">
-        <div className="absolute -inset-px overflow-visible">
+        <div className={`absolute inset-0 transition-transform duration-2000 overflow-visible origin-top ${opened ? "scale-90" : "scale-150"}`}>
           <Image
             src={background.src}
             alt={background.alt}
             fill
             priority
-            className="object-cover object-[47%_center]"
+            className="object-cover object-[46.5%_center] overflow-visible"
           />
-
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-linear-to-b from-transparent to-white" />
         </div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-white/50 to-white h-full w-full overflow-visible" />
 
         <FadeDown requireMusic once delay={3} className="relative w-full flex justify-center my-5">
           <div className="relative w-full max-w-50 max-h-75 aspect-2/4 rounded-full overflow-hidden border-7 border-double border-primary">
