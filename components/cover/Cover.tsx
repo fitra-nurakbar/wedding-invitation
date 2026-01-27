@@ -43,7 +43,7 @@ export default function Cover() {
             className="object-cover object-[46.5%_center] overflow-visible"
           />
         </div>
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-white/50 to-white h-full w-full" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/20 via-white/50 to-white h-full w-full" />
 
         <FadeDown requireMusic once delay={3.5} className="relative w-full flex justify-center my-5">
           <div className="relative w-full max-w-50 max-h-75 aspect-2/4 rounded-full overflow-hidden border-7 border-double border-primary">
