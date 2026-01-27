@@ -31,10 +31,10 @@ export default function Cover() {
   return (
     <section
       id="cover"
-      className="relative flex flex-col items-center justify-center overflow-visible bg-white"
+      className="relative flex flex-col items-center justify-center bg-white"
     >
       <div className="relative flex flex-col items-center text-center py-10 w-full min-h-screen z-5">
-        <div className={`absolute inset-0 transition-transform duration-2000 overflow-visible origin-top ${opened ? "scale-90" : "scale-150"}`}>
+        <div className={`absolute inset-0 transition-transform duration-2000 origin-top ${opened ? "scale-90" : "scale-150"}`}>
           <Image
             src={background.src}
             alt={background.alt}
@@ -43,9 +43,9 @@ export default function Cover() {
             className="object-cover object-[46.5%_center] overflow-visible"
           />
         </div>
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-white/50 to-white h-full w-full overflow-visible" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-white/50 to-white h-full w-full" />
 
-        <FadeDown requireMusic once delay={3} className="relative w-full flex justify-center my-5">
+        <FadeDown requireMusic once delay={3.5} className="relative w-full flex justify-center my-5">
           <div className="relative w-full max-w-50 max-h-75 aspect-2/4 rounded-full overflow-hidden border-7 border-double border-primary">
             <Image
               src={profile.src}
@@ -58,7 +58,7 @@ export default function Cover() {
           </div>
         </FadeDown>
 
-        <FadeUp requireMusic once delay={4} className="relative">
+        <FadeUp requireMusic once delay={4.5} className="relative">
           <p className="text-sm font-roboto font-light tracking-widest mb-3">
             The Wedding Of
           </p>

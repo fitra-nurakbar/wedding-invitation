@@ -94,18 +94,16 @@ export default function InvitationCover({ guestName }: { guestName: string }) {
             <button
               onClick={handleOpen}
               className="
-                px-6 py-2 mt-4
+                px-[3vh] py-[1vh]
                 bg-white
                 text-gray-500
-                text-sm
-                active:scale-110
-                transition
-                duration-300
+                text-[1.6vh]
+                animate-scale
                 cursor-pointer
               "
             >
-              <div className="flex gap-2 items-center">
-                <Envelope className="size-5" />
+              <div className="flex gap-[0.5vh] items-center">
+                <Envelope className="size-[2vh]" />
                 <span>Buka Undangan</span>
               </div>
             </button>

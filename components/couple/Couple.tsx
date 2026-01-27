@@ -18,7 +18,7 @@ export default function Personality() {
 
     return (
         <section id="couple" className="relative flex flex-col gap-5 bg-white text-center py-15 px-6">
-            <div className="absolute -inset-px overflow-visible">
+            <div className="absolute -inset-px overflow-hidden">
                 <Image
                     src={background.src}
                     alt={background.alt}

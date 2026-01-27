@@ -18,7 +18,7 @@ export default function Story() {
 
     return (
         <section id='event' className="relative bg-[#DFD8D1] px-5 py-10">
-            <div className="absolute -inset-px overflow-visible">
+            <div className="absolute -inset-px overflow-hidden">
                 <Image
                     src={background.src}
                     alt={background.alt}

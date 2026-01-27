@@ -4,7 +4,7 @@ export const personalities = {
     fullName: "Ifha Siti Musaropah",
     born: "Banjar, 25 Maret 2001",
     image: "/images/bride.webp",
-    parent: "Anak ke-3 Dari Bapak Slamet Rianto dan Ibu Ikar kartini",
+    parent: "Anak ke-3 Dari Bapak Slamet Rianto dan Ibu Ikar Kartini",
   },
 
   groom: {

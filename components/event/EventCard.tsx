@@ -18,7 +18,7 @@ export default function EventCard({ data }: EventCardProps) {
 
   return (
     <ScaleUp delay={0.3} requireMusic className="relative flex flex-col justify-center bg-white/80 text-center rounded-2xl shadow-md p-6 overflow-hidden">
-      <div className="absolute -inset-px overflow-visible">
+      <div className="absolute -inset-px overflow-hidden">
         <Image
           src={background.src}
           alt={background.alt}
