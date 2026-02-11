@@ -49,28 +49,33 @@ export default function Story() {
                 </ScaleUp>
                 <div className="flex flex-col gap-3 px-6">
                     <FadeUp requireMusic>
-                        <p className='text-[13px] text-justify hyphens-auto'>
-                            In 2021, we got to know each other. Our introduction began with a conversation about the time when I was in school and he was on a community service program (KKN) from his campus, and he was placed where I lived. Our acquaintance was brief, just friends exchanging stories from a distance.
-                        </p>
-                    </FadeUp>
-                    <FadeUp requireMusic>
                         <h3 className='text-[14px] font-semibold tracking-widest uppercase'>
-                            Our first meet
+                            Awal Bertemu
                         </h3>
                     </FadeUp>
                     <FadeUp requireMusic>
                         <p className='text-[13px] text-justify hyphens-auto'>
-                            Separated by distance and time, fate intervened again, guiding our paths, deciding to meet in 2025. Amidst the chaos of the world, our first meeting felt like an unexpected moment, as if the universe had conspired to bring us together. Day by day, our bond deepened, transitioning from friendship to something deeper and more meaningful. We embarked on a journey of discovery, eager to unravel the mysteries of each other's hearts.
+                            Kami dipertemukan dalam suatu program kegiatan kampus pada tahun 2016, berawal dari obrolan santai dan dan lama kelamaan berubah menjadi pertemenan akrab.
                         </p>
                     </FadeUp>
                     <FadeUp requireMusic>
                         <h3 className='text-[14px] font-semibold tracking-widest uppercase'>
-                            Forever After
+                            Menjalin Hubungan
                         </h3>
                     </FadeUp>
                     <FadeUp requireMusic>
                         <p className='text-[13px] text-justify hyphens-auto'>
-                            Several months of shared experiences, laughter, and tears have paved the way. We decided to unite in the most serious of relationships that is marriage.
+                            Perjalanan kami dipenuhi kebahagiaan, canda dan tawa. Sehingga membuat kami yakin bahwa kami diciptakan untuk saling melengkapi dan ingin melanjutkan menuju jenjang pernikahan.
+                        </p>
+                    </FadeUp>
+                    <FadeUp requireMusic>
+                        <h3 className='text-[14px] font-semibold tracking-widest uppercase'>
+                            Pernikahan
+                        </h3>
+                    </FadeUp>
+                    <FadeUp requireMusic>
+                        <p className='text-[13px] text-justify hyphens-auto'>
+                            Hari yang dinanti pun kini tiba. Kami siap menjalani babak baru sebagai suami dan istri, dengan restu dan doa dari keluarga kami masing-masing dan juga kerabat maupun sahabat kami semua.
                         </p>
                     </FadeUp>
                 </div>
