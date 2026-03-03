@@ -12,6 +12,6 @@ export const personalities = {
     fullName: "Jefri Abdullah Iswandi",
     born: "Samarinda, 14 Maret 1996",
     image: "/images/groom.webp",
-    parent: "Anak Ke-5 Dari Bapak Alm. Zainauri Bihis dan Ibu Puji Astuti",
+    parent: "Anak Ke-5 Dari Bapak Alm. Zainuri Bihis dan Ibu Puji Astuti",
   },
 }
