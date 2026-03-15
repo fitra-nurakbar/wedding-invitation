@@ -9,7 +9,7 @@ export const personalities = {
 
   groom: {
     name: "Jefri",
-    fullName: "Jefri Abdullah Iswandi",
+    fullName: "Jefri Abdullah Iswandi, S.T.",
     born: "Samarinda, 14 Maret 1996",
     image: "/images/groom.webp",
     parent: "Anak Ke-5 Dari Bapak Alm. Zainuri Bihis dan Ibu Puji Astuti",
