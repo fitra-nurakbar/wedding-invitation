@@ -8,7 +8,7 @@ export default function AttendanceForm() {
     const [status, setStatus] = useState('')
     const [count, setCount] = useState(1)
 
-    const phoneNumber = '6288218144707'
+    const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()

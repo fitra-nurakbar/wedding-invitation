@@ -1,7 +1,7 @@
 'use server'
 
 import { headers } from 'next/headers'
-import { supabase } from '@/utils/supabase/server' 
+import { supabaseAdmin } from '@/utils/supabase/server' 
 import { containsBadWords } from '@/utils/badWords'
 
 export async function submitComment(
@@ -27,7 +27,7 @@ if (containsBadWords(message)) {
     return { error: 'Komentar mengandung kata tidak pantas' }
   }
   // Cek apakah IP sudah pernah komentar
-  const { data: existingIP } = await supabase
+  const { data: existingIP } = await supabaseAdmin
     .from('comment_ips')
     .select('ip')
     .eq('ip', ip)
@@ -40,7 +40,7 @@ if (containsBadWords(message)) {
   }
 
   // Simpan komentar
-  const { error: insertError } = await supabase
+  const { error: insertError } = await supabaseAdmin
     .from('messages')
     .insert([{ name, message }])
 
@@ -49,7 +49,7 @@ if (containsBadWords(message)) {
   }
 
   // Catat IP (permanen)
-  await supabase
+  await supabaseAdmin
     .from('comment_ips')
     .insert({ ip })
 
